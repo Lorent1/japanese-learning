@@ -1,31 +1,23 @@
-import { StyleSheet } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { Pressable, Text, View } from 'react-native';
+import styles from '../styles';
+import Card_row from '../components/card_row';
+import katakana_symbols from '../data';
+import Menu from '../components/menu';
+import { ScrollView } from 'react-native-gesture-handler';
 
-import EditScreenInfo from '../../components/EditScreenInfo';
-import { Text, View } from '../../components/Themed';
-
-export default function TabTwoScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/two.tsx" />
-    </View>
-  );
+export default function App() {
+    return (
+        <ScrollView style={styles.container}>
+          <Menu/>
+          <View>
+            <Pressable>
+              <Text>Тест</Text>
+            </Pressable>
+          </View>
+          {katakana_symbols.map((obj: Object, index : number) => <Card_row key={index} obj = {obj}/>)}
+          <View style={styles.bottom}></View>
+          <StatusBar style="auto" />
+        </ScrollView>
+      );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});

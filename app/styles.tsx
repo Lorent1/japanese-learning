@@ -22,11 +22,24 @@ const styles = StyleSheet.create({
       alignItems: "center"
     },
     cards: {
+      height: 140,
+      width: "100%",
+      flexDirection: "column"
+    },
+    cards_main: {
       height: 100,
       width: "100%",
       flexDirection: "row",
       justifyContent: "space-around",
-      marginTop: 10
+      marginBottom: 10
+    },
+    cards_upper: {
+      width: "100%",
+      height: 30,
+      borderBottomWidth: 2,
+      borderTopWidth: 2,
+      borderColor: "black",
+      flexDirection: "column"
     },
     card: {
       height: "100%",
@@ -47,7 +60,32 @@ const styles = StyleSheet.create({
     bottom: {
       width: "100%",
       height: 100
-    }
+    },
+    functions: {
+      width: "100%",
+      height: 50,
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    },
+    function_button: {
+      width: 200,
+      height: 30,
+      backgroundColor: "green",
+      justifyContent: "center",
+      alignItems: "center",
+      borderRadius: 10
+    },
+    checkboxBase: {
+      width: "100%",
+      height: "100%",
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'transparent',
+    },
+    checkboxChecked: {
+      backgroundColor: 'green',
+    },
 });
   
 

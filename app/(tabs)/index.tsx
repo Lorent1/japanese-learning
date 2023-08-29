@@ -1,30 +1,7 @@
-import { StyleSheet } from 'react-native';
-import { Text, View } from 'react-native';
-import Menu from '../components/menu';
+import symbols from '../data';
+import Cards_Screen from '../components/cards_screen';
 
-export default function TabOneScreen() {
-  return (
-    <View style={styles.container}>
-      <Menu></Menu>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator}/>
-    </View>
-  );
+export default function Hiragana_screen() {
+  return (<Cards_Screen symbols = {symbols.hiragana}/>)
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
